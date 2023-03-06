@@ -607,15 +607,7 @@ CreateSupportList({"GPO - Grand Piece Online","Blox Fruit","King Legacy","Anime 
 	"Pet Simulator X","Mad City","Viet Nam Piece","Field Trip Z","Giant Survival!",
 	"Murder Mystery 2","steve's one piece","Anime Fighters Simulator","Tradelands","Dungeon Quest","Two Piece"
 })
-_G.HoHoLoaded = false
-if getgenv().Key and listPre[game.GameId] ~= nil then
-	getgenv().messagebox = function()end
-	loadstring(listPre[tonumber(game.GameId)])()
-elseif not getgenv().Key and list[game.GameId] ~= nil then
-	loadstring(list[tonumber(game.GameId)])()
-else
-	game.Players.LocalPlayer:Kick("game not support, discord.gg/hohohub")
-end
+_G.HoHoLoaded = true
 
 local path = "loadstring(game:HttpGet('https://raw.githubusercontent.com/buckzin/speedhub/main/ScriptLoad.lua'))()"
 if getgenv().Key then
